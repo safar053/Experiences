@@ -1,0 +1,125 @@
+@import 'tailwindcss';
+
+.rdrDefinedRangesWrapper {
+    display: none !important;
+}
+
+.number-input-no-arrows {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+.number-input-no-arrows::-webkit-outer-spin-button,
+.number-input-no-arrows::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@layer components {
+    .transition-default {
+        @apply transition duration-300 ease-in-out;
+    }
+
+    .notification-button-common {
+        @apply cursor-pointer rounded-md border bg-transparent px-4 py-2 font-semibold capitalize transition duration-300;
+    }
+
+    .notification-confirm {
+        @apply cursor-pointer rounded-md border border-blue-500 bg-transparent px-4 py-2 font-semibold text-blue-500 capitalize hover:bg-blue-500 hover:text-white;
+    }
+
+    .notification-cancel {
+        @apply ml-3 cursor-pointer rounded-md border border-red-500 bg-transparent px-4 py-2 font-semibold text-red-500 capitalize;
+    }
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    * {
+        @apply outline-none;
+    }
+
+    button {
+        @apply cursor-pointer;
+    }
+
+    input {
+        @apply outline-none;
+    }
+
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #f0f0f0;
+        border-radius: 10px;
+    }
+}
+
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .rdrMonthAndYearWrapper {
+        display: none !important;
+    }
+}
+
+@theme {
+    /* Custom Gray Shades */
+    --color-gray-50: #f3f5f9;
+    --color-gray-100: #f0f2f4;
+    --color-gray-200: #e8e8e8;
+    --color-gray-300: #a2a1a1;
+    --color-gray-400: #6b6b6b;
+    --color-gray-500: #4f515f;
+    --color-gray-800: #343a40;
+    --color-gray-900: #1d2437;
+
+    /* Custom Blue Shades */
+    --color-blue-100: #deebff;
+    --color-blue-200: #dce4f0;
+    --color-blue-300: #536adf;
+    --color-blue-400: #6479e3;
+    --color-blue-500: #2577c8;
+    --color-blue-600: #536adf;
+
+    /* Custom Slate Shades */
+    --color-slate-400: #8a9bb9;
+
+    /* Custom Green Shades */
+    --color-green-500: #31c178;
+
+    /* Custom Orange Shades */
+    --color-orange-500: #ff9d00;
+
+    /* Custom Font Family */
+    --font-display: Inter, sans-serif;
+
+    /* Custom Box Shadow */
+    --shadow-md: 2px 3px 8px rgba(0, 142, 255, 0.1);
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+@keyframes spin-border {
+    to {
+        --angle: 1turn;
+    }
+}

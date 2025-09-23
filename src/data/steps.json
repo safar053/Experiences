@@ -1,0 +1,34 @@
+{
+    "en": [
+        "Open the Mastercard Assistance bot, enter your name, accept the privacy terms, and navigate to the \"Priceless Experience\" section.",
+        "Browse and select the event you're interested in.",
+        "The system will display available offers in your area — book the the one you like.",
+        "If you don't have a linked card, add a new one.",
+        "Enter your card details to add it to your account.",
+        "Click \"Pay Now\" — your registration will be completed, and the payment will be processed."
+    ],
+    "az": [
+        "Mastercard Assistance botunda adınızı daxil edin, məxfilik şərtlərini təsdiqləyin və \"Priceless Experience\" addımını seçin.",
+        "Əldə etmək istədiyiniz tədbiri seçin.",
+        "Sizə yaxın olan təkliflər göstərilir - istədiyiniz halda əldə edə bilərsiniz.",
+        "Kartınız yoxdursa, yeni kart əlavə edə bilərsiniz.",
+        "Yeni kart əlavə etmək üçün kart məlumatlarınızı daxil edin.",
+        "\"Ödəniş et\" düyməsini tıkladıqdan sonra qeydiyyatınız tamamlanacaq və ödənişiniz qəbul ediləcək."
+    ],
+    "ru": [
+        "Откройте бот Mastercard Assistance, укажите ваше имя, примите политику конфиденциальности и перейдите в раздел \"Priceless Experience\".",
+        "Найдите и выберите интересующее вас мероприятие.",
+        "Система покажет доступные предложения в вашем регионе — забронируйте понравившийся вариант.",
+        "При отсутствии привязанной карты добавьте новую.",
+        "Введите реквизиты карты для её добавления.",
+        "Нажмите \"Оплатить\" — регистрация завершится, и платёж будет обработан."
+    ],
+    "tr": [
+        "Mastercard Assistance botunu açın, adınızı girin, gizlilik şartlarını kabul edin ve \"Priceless Experience\" bölümüne gidin.",
+        "İlgilendiğiniz etkinliği bulun ve seçin.",
+        "Sistem bölgenizde mevcut teklifleri gösterecek — beğendiğiniz seçeneği rezerve edin.",
+        "Bağlı bir kartınız yoksa, yeni bir kart ekleyin.",
+        "Kartınızı eklemek için kart bilgilerinizi girin.",
+        "\"Şimdi Öde\" düğmesine tıklayın — kaydınız tamamlanacak ve ödemeniz işlenecektir."
+    ]
+}
