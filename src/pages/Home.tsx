@@ -25,7 +25,9 @@ const Home = () => {
     const {locale} = useCommonStore()
 
     return (
-        <div className="flex w-full flex-col items-center px-4 py-6 sm:px-6 sm:pt-8 md:px-10 md:pt-10 lg:px-16 lg:pt-[30px] xl:px-[100px]">
+        <div className="relative flex w-full flex-col items-center px-4 py-6 sm:px-6 md:px-10 md:py-16 lg:px-16 xl:px-[100px]">
+            <div className="absolute -top-[45vw] -z-[1] aspect-square w-[100vw] rounded-full bg-[#FBFCFF] md:-top-[72vw]" />
+            <div className="absolute top-[55vw] -z-[1] aspect-square w-[100vw] rounded-full bg-[#FBFCFF] md:top-[28vw]" />
             <h1 className="max-w-[880px] text-center text-2xl font-semibold sm:text-3xl md:text-4xl lg:text-[52px]">
                 {t('title')}
             </h1>

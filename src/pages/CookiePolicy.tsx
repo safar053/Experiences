@@ -1,7 +1,9 @@
 const CookiePolicy = () => {
     return (
-        <div className="flex w-full flex-col items-center p-[100px] pt-[30px]">
-            <h1 className="mb-8 text-3xl font-bold">Privacy Policy</h1>
+        <div className="flex w-full flex-col items-center px-4 py-8 sm:px-8 sm:pt-12 md:px-16 lg:px-24 xl:px-[100px]">
+            <h1 className="mb-6 text-2xl font-bold sm:text-3xl lg:text-4xl text-gray-900">
+                Privacy Policy
+            </h1>
             <div className="max-w-4xl space-y-6 text-justify leading-relaxed text-gray-700">
                 <p>
                     This Privacy Policy explains how we collect, use, and
@@ -10,7 +12,7 @@ const CookiePolicy = () => {
                     agree to the terms described in this document.
                 </p>
 
-                <h2 className="text-2xl font-semibold">
+                <h2 className="text-xl font-semibold sm:text-2xl">
                     1. Information We Collect
                 </h2>
                 <p>
@@ -21,7 +23,7 @@ const CookiePolicy = () => {
                     device identifiers to improve the quality of our services.
                 </p>
 
-                <h2 className="text-2xl font-semibold">
+                <h2 className="text-xl font-semibold sm:text-2xl">
                     2. How We Use Your Information
                 </h2>
                 <p>
@@ -33,7 +35,7 @@ const CookiePolicy = () => {
                     information for research and analysis.
                 </p>
 
-                <h2 className="text-2xl font-semibold">
+                <h2 className="text-xl font-semibold sm:text-2xl">
                     3. Sharing of Information
                 </h2>
                 <p>
@@ -46,7 +48,7 @@ const CookiePolicy = () => {
                     define.
                 </p>
 
-                <h2 className="text-2xl font-semibold">
+                <h2 className="text-xl font-semibold sm:text-2xl">
                     4. Cookies and Tracking
                 </h2>
                 <p>
@@ -58,7 +60,9 @@ const CookiePolicy = () => {
                     them.
                 </p>
 
-                <h2 className="text-2xl font-semibold">5. Data Security</h2>
+                <h2 className="text-xl font-semibold sm:text-2xl">
+                    5. Data Security
+                </h2>
                 <p>
                     Protecting your personal data is our top priority. We
                     implement reasonable technical and organizational measures
@@ -68,7 +72,9 @@ const CookiePolicy = () => {
                     risk.
                 </p>
 
-                <h2 className="text-2xl font-semibold">6. Your Rights</h2>
+                <h2 className="text-xl font-semibold sm:text-2xl">
+                    6. Your Rights
+                </h2>
                 <p>
                     Depending on your location, you may have rights under
                     applicable data protection laws. These may include the right
@@ -77,7 +83,7 @@ const CookiePolicy = () => {
                     contact us using the details below.
                 </p>
 
-                <h2 className="text-2xl font-semibold">
+                <h2 className="text-xl font-semibold sm:text-2xl">
                     7. Changes to This Policy
                 </h2>
                 <p>
@@ -87,7 +93,9 @@ const CookiePolicy = () => {
                     stay informed about how we protect your information.
                 </p>
 
-                <h2 className="text-2xl font-semibold">8. Contact Us</h2>
+                <h2 className="text-xl font-semibold sm:text-2xl">
+                    8. Contact Us
+                </h2>
                 <p>
                     If you have any questions or concerns about this Privacy
                     Policy, please contact us at:

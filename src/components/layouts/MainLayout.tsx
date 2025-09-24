@@ -22,8 +22,6 @@ const MainLayout = ({children, title}: Props) => {
 
     return (
         <main className="relative flex min-h-[100vh] w-full flex-col overflow-hidden">
-            <div className="absolute -top-[45vw] -z-[1] aspect-square w-[100vw] rounded-full bg-[#FBFCFF] md:-top-[68vw]" />
-            <div className="absolute top-[55vw] -z-[1] aspect-square w-[100vw] rounded-full bg-[#FBFCFF] md:top-[32vw]" />
             <Header />
             <div className="flex w-full flex-1">{children}</div>
             <Footer />
