@@ -3,8 +3,6 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import MainLayout from './components/layouts/MainLayout'
 import {getRoutes} from './routes'
 
-import {Toaster} from 'react-hot-toast'
-
 import './i18n'
 
 const routeArr = Object.values(getRoutes())
@@ -12,8 +10,6 @@ const routeArr = Object.values(getRoutes())
 function App() {
     return (
         <>
-            <Toaster position="top-right" />
-
             <Router>
                 <Routes>
                     {routeArr.map((item) => (

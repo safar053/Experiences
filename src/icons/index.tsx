@@ -42,9 +42,10 @@ const ArrowIcon = () => {
     )
 }
 
-const TelegramIcon = () => {
+const TelegramIcon = ({className}: IconProps) => {
     return (
         <svg
+            className={className}
             xmlns="http://www.w3.org/2000/svg"
             width="42"
             height="42"
@@ -78,9 +79,10 @@ const TelegramIcon = () => {
     )
 }
 
-const InstagramIcon = () => {
+const InstagramIcon = ({className}: IconProps) => {
     return (
         <svg
+            className={className}
             xmlns="http://www.w3.org/2000/svg"
             width="42"
             height="42"
@@ -132,9 +134,10 @@ const InstagramIcon = () => {
     )
 }
 
-const WhatsappIcon = () => {
+const WhatsappIcon = ({className}: IconProps) => {
     return (
         <svg
+            className={className}
             xmlns="http://www.w3.org/2000/svg"
             width="42"
             height="42"

@@ -6,16 +6,16 @@ import clsx from 'clsx'
 import {useOutsideClick} from '@/hooks/useOutsideClick'
 import {useCommonStore} from '@/store/commonStore'
 
+type Locale = {key: 'en' | 'az' | 'ru' | 'tr'; label: string}
+
 const LocaleSwitcher: React.FC = () => {
     const {i18n} = useTranslation()
     const ref = useRef<HTMLDivElement>(null)
-    const [isOpen, setIsOpen] = useState<boolean>(false)
+    const [isOpen, setIsOpen] = useState(false)
 
     const {locale, setLocale} = useCommonStore()
 
-    useOutsideClick(ref, () => {
-        setIsOpen(false)
-    })
+    useOutsideClick(ref, () => setIsOpen(false))
 
     const changeLanguage = (lng: string) => {
         i18n.changeLanguage(lng)
@@ -24,63 +24,64 @@ const LocaleSwitcher: React.FC = () => {
         setLocale(lng)
     }
 
-    const locales = [
-        {
-            key: 'en',
-            label: 'English'
-        },
-        {
-            key: 'az',
-            label: 'Azərbaycanca'
-        },
-        {
-            key: 'ru',
-            label: 'Русский'
-        },
-        {
-            key: 'tr',
-            label: 'Türkçe'
-        }
+    const locales: Locale[] = [
+        {key: 'en', label: 'English'},
+        {key: 'az', label: 'Azərbaycanca'},
+        {key: 'ru', label: 'Русский'},
+        {key: 'tr', label: 'Türkçe'}
     ]
+
+    const current =
+        locales.find((l) => l.key === (locale as Locale['key'])) ?? locales[0]
 
     return (
         <div
             ref={ref}
-            className="relative flex h-[35px] w-[170px] cursor-pointer items-center rounded-[10px] border border-[#2683DE] px-[10px]"
+            className="relative flex h-8 w-24 cursor-pointer items-center rounded-[10px] border border-[#2683DE] px-2 sm:h-9 sm:w-32 sm:px-2.5 md:h-10 md:w-40 md:px-[10px] lg:w-[170px]"
         >
             <span
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => setIsOpen((p) => !p)}
                 className="flex h-full w-full items-center justify-between"
             >
-                <span className="flex items-center gap-[6px] text-[#6B6B6B] select-none">
+                <span className="flex items-center gap-1.5 text-[#6B6B6B] select-none sm:gap-[6px]">
                     <GlobeIcon />
-                    {locales.find((lng) => lng.key === locale).label}
+                    <span className="text-xs uppercase sm:text-sm md:hidden">
+                        {(current.key || locale).toUpperCase()}
+                    </span>
+                    <span className="hidden text-[15px] md:inline">
+                        {current.label}
+                    </span>
                 </span>
+
                 <span
-                    className={clsx('transition-all duration-300', {
+                    className={clsx('transition-transform duration-300', {
                         ['-rotate-180']: isOpen
                     })}
                 >
                     <ArrowIcon />
                 </span>
             </span>
+
             <div
                 className={clsx(
-                    'absolute top-10 left-0 flex w-full flex-col gap-1 overflow-hidden rounded-[10px] border border-[#2683DE] bg-white',
-                    {
-                        hidden: !isOpen
-                    }
+                    `absolute top-9 left-0 z-10 flex w-full flex-col gap-1 overflow-hidden rounded-[10px] border border-[#2683DE] bg-white md:top-10`,
+                    {hidden: !isOpen}
                 )}
             >
                 {locales
-                    ?.filter((lng) => lng.key !== locale)
-                    ?.map((lng) => (
+                    .filter((lng) => lng.key !== current.key)
+                    .map((lng) => (
                         <span
                             key={lng.key}
                             onClick={() => changeLanguage(lng.key)}
-                            className="cursor-pointer px-[10px] py-1 text-center text-left text-[#6B6B6B] hover:bg-[#E3F1FF] hover:text-[#2683DE]"
+                            className="cursor-pointer px-2 py-1 text-left text-xs text-[#6B6B6B] hover:bg-[#E3F1FF] hover:text-[#2683DE] sm:text-sm md:px-[10px] md:py-1.5 md:text-[15px]"
                         >
-                            {lng.label}
+                            <span className="uppercase md:hidden">
+                                {lng.key.toUpperCase()}
+                            </span>
+                            <span className="hidden md:inline">
+                                {lng.label}
+                            </span>
                         </span>
                     ))}
             </div>

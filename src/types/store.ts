@@ -1,4 +1,3 @@
-
 export interface CommonState {
     locale: string
     pageTitle: string

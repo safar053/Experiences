@@ -1,17 +1,17 @@
 export const botsUrls = [
     {
         key: 'telegram',
-        url: '/telegram',
+        url: 'https://web.telegram.org/k/#@MCassistancebot',
         label: 'Telegram'
     },
     {
-        key: 'instagram',
-        url: '/instagram',
-        label: 'Instagram'
+        key: 'whatsapp',
+        url: 'https://wa.me/994103125066',
+        label: 'Whatsapp'
     },
     {
-        key: 'whatsapp',
-        url: '/whatsapp',
-        label: 'Whatsapp'
+        key: 'instagram',
+        url: 'https://web.telegram.org/k/#@MCassistancebot',
+        label: 'Instagram'
     }
 ]
